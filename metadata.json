@@ -1,0 +1,6 @@
+{
+  "name": "HelpDesk Pro - Gestión Inteligente de Tickets",
+  "description": "Sistema de gestión de soporte técnico con asignación inteligente de prioridad, auditoría inmutable, notificaciones con audio opcional y reportes analíticos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

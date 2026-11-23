@@ -1,0 +1,75 @@
+================================================================================
+            SEDATECH - SISTEMA INTEGRAL DE GESTIÓN DE TICKETS
+                 PAQUETE INSTALABLE OFICIAL "SEDATECH_INSTALL"
+     [VENTANA DE LOGIN TRANSPARENTE EN PRIMER PLANO · WIN32 + DWM + WEBVIEW2]
+         [CON CERTIFICADO DIGITAL AUTHENTICODE SHA-256 PARA ANTIVIRUS]
+================================================================================
+
+ARQUITECTURA DE ALTA TECNOLOGÍA (LOGIN FLOTANTE TRANSPARENTE REAL):
+--------------------------------------------------------------------------------
+Al ejecutar SedaTech.exe, el programa NO abre un navegador ni una ventana con
+marco o fondo sólido. En su lugar, inicia un host nativo de 64 bits (Win32 +
+DWM con transparencia por píxel + Microsoft Edge WebView2 con canal alfa 0)
+que proyecta ÚNICAMENTE el formulario de Login flotando en primer plano sobre
+tu escritorio de Windows, con fondo de ventana 100% transparente, esquinas
+redondeadas, sombra difuminada real, aparición suave (fade-in) y arrastre libre.
+
+Al iniciar sesión correctamente, el formulario flotante se transforma de forma
+automática en la ventana principal redimensionable de escritorio (1366x768) y,
+al cerrar sesión, regresa instantáneamente al modo Login flotante transparente.
+
+CONTENIDO DE LA CARPETA "SEDATECH_INSTALL":
+--------------------------------------------------------------------------------
+1. SedaTech_Setup.exe                 : INSTALADOR OFICIAL (.EXE) WINDOWS 10/11.
+                                        Firmado digitalmente con SHA-256.
+2. SedaTech.exe                       : Aplicación nativa 64-bit Win32 + DWM +
+                                        WebView2 con Login transparente (firmado).
+3. SedaTech.ico                       : Ícono oficial de SedaTech para el acceso
+                                        directo del Escritorio y Menú Inicio.
+4. WebView2Loader.dll                 : Librería oficial de Microsoft Edge WebView2
+                                        (conserva firma digital oficial de Microsoft).
+5. Instalar_Certificado_Antivirus.bat : ASISTENTE DE CERTIFICADO DE CONFIANZA (1 CLIC).
+6. SedaTech_RootCA.cer                : Certificado Raíz de Confianza (SedaTech).
+7. SedaTech_Certificado_Seguridad.cer : Certificado X.509 de Editor Verificado.
+8. Iniciar_SedaTech_Servidor_Local.bat: Lanzador alternativo en servidor local HTTP.
+9. Desinstalar_SedaTech.bat           : Asistente auxiliar de desinstalación.
+10. app/                              : Compilación actualizada completa de SedaTech.
+11. LEEME_INSTALACION.txt             : Esta guía de instalación y confianza.
+
+================================================================================
+PASO 1: INSTALAR EL CERTIFICADO DIGITAL (PARA QUE WINDOWS Y ANTIVIRUS NO BLOQUEEN)
+================================================================================
+Como es un software privado de SedaTech, los certificados raíz privados deben
+registrarse una vez en el equipo para que Windows Defender, SmartScreen y los
+antivirus (ESET, Kaspersky, Avast, Norton, McAfee, etc.) verifiquen automáticamente
+la firma Authenticode de los archivos .exe:
+
+1. Haga clic derecho sobre "Instalar_Certificado_Antivirus.bat" y seleccione
+   "Ejecutar como administrador" (o haga doble clic y acepte el aviso UAC).
+2. El script instalará:
+   - "SedaTech_RootCA.cer" en Entidades de Certificación Raíz de Confianza.
+   - "SedaTech_Certificado_Seguridad.cer" en Editores de Confianza.
+3. Al finalizar, el propio script verificará con PowerShell que la firma digital
+   de "SedaTech_Setup.exe" y "SedaTech.exe" figure como "Valid".
+
+================================================================================
+PASO 2: INSTALAR O EJECUTAR LA APLICACIÓN EN WINDOWS
+================================================================================
+- Opción 1 (Instalador Oficial Recomendado):
+  1. Ejecute "SedaTech_Setup.exe" mediante doble clic.
+  2. Siga el asistente en español (creará accesos directos en el Escritorio y en
+     el Menú Inicio, además del registro estándar en "Agregar o quitar programas").
+  3. Al finalizar, marque "Iniciar SedaTech ahora".
+
+- Opción 2 (Ejecución Portable Directa sin instalar):
+  Ejecute directamente "SedaTech.exe" dentro de esta carpeta "SEDATECH_INSTALL"
+  (mantenga juntos "SedaTech.exe", "WebView2Loader.dll" y la carpeta "app/").
+
+================================================================================
+REQUISITOS Y SEGURIDAD:
+================================================================================
+- Windows 10 o Windows 11 de 64 bits (Microsoft Edge WebView2 Runtime viene
+  preinstalado en Windows 11 y actualizado automáticamente en Windows 10).
+- Control estricto por roles (Administrador, Técnico y Usuario).
+- Reportes ejecutivos exportables a PDF tamaño A4 y CSV protegido.
+================================================================================
